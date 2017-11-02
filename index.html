@@ -1,0 +1,211 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+
+<section class="section-one">
+  <p class="stop-watch-one">30</p>
+  <div class="flex">
+    <button class="watch-one-start">start</button>
+    <button class="watch-one-stop">stop</button>
+    <button class="watch-one-clear">clear</button>
+  </div>
+</section>
+
+<section class="section-two">
+  <p class="stop-watch-two">30</p>
+  <div class="flex">
+    <button class="watch-two-start">start</button>
+    <button class="watch-two-stop">stop</button>
+    <button class="watch-two-clear">clear</button>
+  </div>
+</section>
+
+<section class="section-three">
+  <p class="stop-watch-three">30</p>
+  <div class="flex">
+    <button class="watch-three-start">start</button>
+    <button class="watch-three-stop">stop</button>
+    <button class="watch-three-clear">clear</button>
+  </div>
+</section>
+<style>
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+section {
+  background: #508a50;
+  margin-bottom: 10px;
+}
+.flex {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+p {
+  color: #fff;
+  font-weight: 800;
+  font-size: 40px;
+}
+button {
+  background: #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 0;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin: 10px 10px 30px;
+}
+
+</style>
+  </head>
+  <body>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>
+    initTwo = function() {
+      var $timerTwo = $('.stop-watch-two'),
+          $watchTwoStart = $('.watch-two-start'),
+          $watchTwoStop = $('.watch-two-stop'),
+          $watchTwoClear = $('.watch-two-clear'),
+          secondsTwo = 30,
+          u;
+       $watchTwoStart.on('click', function() {
+        startTimerTwo();
+       });
+
+      $watchTwoStop.on('click', function() {
+        clearTimeout(u);
+      })
+
+      $watchTwoClear.on('click', function() {
+        clearTimeout(u);
+        secondsTwo = 30;
+        $timerTwo.html(secondsTwo);
+        $('.section-two').css({"background": "#508a50"})
+      })
+
+       startTimerTwo = function() {
+          u = setTimeout(subtractTwo, 1000);
+       };
+
+      subtractTwo = function() {
+          secondsTwo--;
+          $timerTwo.html(secondsTwo);
+          if (secondsTwo >= 10) {
+            $('.section-two').css({"background": "#508a50"})
+          }
+          else {
+            $('.section-two').css({"background": "#ce5b5b"})
+          }
+
+          startTimerTwo();
+          if (secondsTwo == 0) {
+            $watchTwoClear.trigger('click');
+          }
+      }
+
+    }
+
+    initThree = function() {
+      var $timerThree = $('.stop-watch-three'),
+          $watchThreeStart = $('.watch-three-start'),
+          $watchThreeStop = $('.watch-three-stop'),
+          $watchThreeClear = $('.watch-three-clear'),
+          secondsThree = 30,
+          v;
+       $watchThreeStart.on('click', function() {
+        startTimerThree();
+       });
+
+      $watchThreeStop.on('click', function() {
+        clearTimeout(v);
+      })
+
+      $watchThreeClear.on('click', function() {
+        clearTimeout(v);
+        secondsThree = 30;
+        $timerThree.html(secondsThree);
+        $('.section-three').css({"background": "#508a50"})
+      })
+
+       startTimerThree = function() {
+          v = setTimeout(subtractThree, 1000);
+       };
+
+      subtractThree = function() {
+          secondsThree--;
+          $timerThree.html(secondsThree);
+          if (secondsThree >= 10) {
+            $('.section-three').css({"background": "#508a50"})
+          }
+          else {
+            $('.section-three').css({"background": "#ce5b5b"})
+          }
+
+          startTimerThree();
+          if (secondsThree == 0) {
+            $watchThreeClear.trigger('click');
+          }
+      }
+
+    }
+
+
+
+    init = function() {
+      var $timerOne = $('.stop-watch-one'),
+          $watchOneStart = $('.watch-one-start'),
+          $watchOneStop = $('.watch-one-stop'),
+          $watchOneClear = $('.watch-one-clear'),
+          secondsOne = 30,
+          t;
+       $watchOneStart.on('click', function() {
+        startTimerOne();
+       });
+
+      $watchOneStop.on('click', function() {
+        clearTimeout(t);
+      })
+
+      $watchOneClear.on('click', function() {
+        clearTimeout(t);
+        secondsOne = 30;
+        $timerOne.html(secondsOne);
+        $('.section-one').css({"background": "#508a50"})
+      })
+
+       startTimerOne = function() {
+          t = setTimeout(subtractOne, 1000);
+       };
+
+      subtractOne = function() {
+          secondsOne--;
+          $timerOne.html(secondsOne);
+          if (secondsOne >= 10) {
+            $('.section-one').css({"background": "#508a50"})
+          }
+          else {
+            $('.section-one').css({"background": "#ce5b5b"})
+          }
+
+          startTimerOne();
+          if (secondsOne == 0) {
+            $watchOneClear.trigger('click');
+          }
+      }
+
+    }
+
+    init();
+    initTwo();
+    initThree();
+    </script>
+</body>
+</html>
