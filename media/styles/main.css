@@ -6,7 +6,7 @@ body {
   font-weight: 300;
 }
 .row {
-  max-width: 800px;
+  max-width: 600px;
   width: 90%;
   margin: 0 auto;
 }
@@ -57,7 +57,7 @@ nav {
 }
 nav ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 0;
@@ -68,7 +68,7 @@ nav li {
   margin-bottom: 20px;
 }
 nav li:last-of-type {
-  margin-bottom: 0;
+  display: none;
 }
 nav a {
   text-decoration: none;
@@ -96,21 +96,17 @@ nav i {
   width: 100vw;
   height: 60vh;
 }
-.box {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 0;
-  right: 0;
-  top: 50%;
-  margin-top: -15px;
-  margin: 0 auto;
+.last-button {
+  max-width: 150px;
+  margin: 20px auto 0;
+  position: relative;
+}
+section h2,
+section p {
+  color: #171717;
 }
 
 @media only screen and (min-width: 768px) {
-  nav ul {
-    flex-direction: row;
-  }
   nav li {
     padding: 5px;
     margin-bottom: 0;
@@ -122,7 +118,14 @@ nav i {
   nav li:last-of-type:hover {
     transform: none;
   }
+  nav li:last-of-type {
+    display: block;
+  }
+  .last-button {
+    display: none;
+  }
   .hero {
     height: 70vh;
+    background-position: 10%;
   }
 }
