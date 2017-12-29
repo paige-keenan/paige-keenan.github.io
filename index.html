@@ -1,239 +1,34 @@
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
-
-<div class="flex">
-  <button class="stop-all">stop all</button>
-  <button class="clear-all">clear all</button>
-</div>
-<section class="section-one">
-  <p class="stop-watch stop-watch-one">30</p>
-  <div class="flex">
-    <button class="watch-one-start">start</button>
-    <button class="watch-one-stop">stop</button>
-    <button class="watch-one-clear">clear</button>
-  </div>
-</section>
-
-<section class="section-two">
-  <p class="stop-watch  stop-watch-two">30</p>
-  <div class="flex">
-    <button class="watch-two-start">start</button>
-    <button class="watch-two-stop">stop</button>
-    <button class="watch-two-clear">clear</button>
-  </div>
-</section>
-
-<section class="section-three">
-  <p class="stop-watch stop-watch-three">30</p>
-  <div class="flex">
-    <button class="watch-three-start">start</button>
-    <button class="watch-three-stop">stop</button>
-    <button class="watch-three-clear">clear</button>
-  </div>
-</section>
-<style>
-* {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-section {
-  background: #508a50;
-  margin-bottom: 10px;
-}
-.flex {
-  width: 100%;
-  justify-content: space-between;
-  display: flex;
-}
-p {
-  color: #fff;
-  font-weight: 800;
-  font-size: 40px;
-}
-.stop-all {
-  background: lightblue;
-}
-.clear-all {
-  background: lightblue;
-}
-button {
-  background: #fff;
-  border-radius: 5px;
-  font-size: 15px;
-  border: 0;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  margin: 10px 10px 30px;
-}
-
-</style>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:400,700'>
+    <link rel='stylesheet' href='media/styles/fonts.css'>
+    <link rel='stylesheet' href='media/styles/main.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+    <script src='media/scripts/main.js'></script>
   </head>
   <body>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-    <script>
-    var $stopAll = $('.stop-all'),
-        $clearAll = $(".clear-all"),
-        t,
-        u,
-        v;
-
-
-        $stopAll.on('click', function() {
-         clearTimeout(t);
-         clearTimeout(u);
-         clearTimeout(v);
-        });
-
-        $clearAll.on('click', function() {
-          clearTimeout(t);
-          clearTimeout(u);
-          clearTimeout(v);
-          seconds = 30;
-          $('.stop-watch').html(seconds);
-          $('section').css({"background": "#508a50"})
-        });
-    initTwo = function() {
-      var $timerTwo = $('.stop-watch-two'),
-          $watchTwoStart = $('.watch-two-start'),
-          $watchTwoStop = $('.watch-two-stop'),
-          $watchTwoClear = $('.watch-two-clear'),
-          secondsTwo = 30;
-       $watchTwoStart.on('click', function() {
-        startTimerTwo();
-       });
-
-      $watchTwoStop.on('click', function() {
-        clearTimeout(u);
-      })
-
-      $watchTwoClear.on('click', function() {
-        clearTimeout(u);
-        secondsTwo = 30;
-        $timerTwo.html(secondsTwo);
-        $('.section-two').css({"background": "#508a50"})
-      })
-
-       startTimerTwo = function() {
-          u = setTimeout(subtractTwo, 1000);
-       };
-
-      subtractTwo = function() {
-          secondsTwo--;
-          $timerTwo.html(secondsTwo);
-          if (secondsTwo >= 10) {
-            $('.section-two').css({"background": "#508a50"})
-          }
-          else {
-            $('.section-two').css({"background": "#ce5b5b"})
-          }
-
-          startTimerTwo();
-          if (secondsTwo == 0) {
-            $watchTwoClear.trigger('click');
-          }
-      }
-
-    }
-
-    initThree = function() {
-      var $timerThree = $('.stop-watch-three'),
-          $watchThreeStart = $('.watch-three-start'),
-          $watchThreeStop = $('.watch-three-stop'),
-          $watchThreeClear = $('.watch-three-clear'),
-          secondsThree = 30;
-       $watchThreeStart.on('click', function() {
-        startTimerThree();
-       });
-
-      $watchThreeStop.on('click', function() {
-        clearTimeout(v);
-      })
-
-      $watchThreeClear.on('click', function() {
-        clearTimeout(v);
-        secondsThree = 30;
-        $timerThree.html(secondsThree);
-        $('.section-three').css({"background": "#508a50"})
-      })
-
-       startTimerThree = function() {
-          v = setTimeout(subtractThree, 1000);
-       };
-
-      subtractThree = function() {
-          secondsThree--;
-          $timerThree.html(secondsThree);
-          if (secondsThree >= 10) {
-            $('.section-three').css({"background": "#508a50"})
-          }
-          else {
-            $('.section-three').css({"background": "#ce5b5b"})
-          }
-
-          startTimerThree();
-          if (secondsThree == 0) {
-            $watchThreeClear.trigger('click');
-          }
-      }
-
-    }
-
-
-
-    init = function() {
-      var $timerOne = $('.stop-watch-one'),
-          $watchOneStart = $('.watch-one-start'),
-          $watchOneStop = $('.watch-one-stop'),
-          $watchOneClear = $('.watch-one-clear'),
-          secondsOne = 30;
-       $watchOneStart.on('click', function() {
-        startTimerOne();
-       });
-
-      $watchOneStop.on('click', function() {
-        clearTimeout(t);
-      })
-
-      $watchOneClear.on('click', function() {
-        clearTimeout(t);
-        secondsOne = 30;
-        $timerOne.html(secondsOne);
-        $('.section-one').css({"background": "#508a50"})
-      })
-
-       startTimerOne = function() {
-          t = setTimeout(subtractOne, 1000);
-       };
-
-      subtractOne = function() {
-          secondsOne--;
-          $timerOne.html(secondsOne);
-          if (secondsOne >= 10) {
-            $('.section-one').css({"background": "#508a50"})
-          }
-          else {
-            $('.section-one').css({"background": "#ce5b5b"})
-          }
-
-          startTimerOne();
-          if (secondsOne == 0) {
-            $watchOneClear.trigger('click');
-          }
-      }
-
-    }
-
-    init();
-    initTwo();
-    initThree();
-    </script>
-</body>
+    <header class='hero'></header>
+    <main>
+      <div class='row'>
+        <h2>Hello</h2>
+        <h3>My name is Paige Keenan, and I am a front-end developer based out of Chicago.</h3>
+        <p><span>Professionally,</span> I'm a developer with an expertise in emulating UX designs, creating animations, and building front-end applications. I've been lucky to work in a field where I get to flex my design muscles and enjoy assisting in the UX process while getting to solve complex code problems in a variety of languages. I'm currently enjoying opportunities to foster my design growth through creating web animations and being a part of the design process of sites I develop.</p>
+        <p><span>Personally,</span> I have too many hobbies. I enjoy learning animation techniques both in the code and design realm, bouldering, playing roller derby, and practicing an assortment of sports on wheels.</p>
+      </div>
+    </main>
+    <nav>
+      <div class='row'>
+        <ul>
+          <li><a href='mailto:paigekatkeenan@gmail.com'><i class='icon-envelop'></i></a></li>
+          <li><a href='https://www.linkedin.com/in/paige-keenan-9baa18b7/' target='_blank'><i class='icon-linkedin2'></i></a></li>
+          <li><a href='https://github.com/paige-keenan' target='_blank'><i class='icon-github'></i></a></li>
+          <li><a href='https://codepen.io/paigekeenan/pens/popular/' target='_blank'><i class='icon-codepen'></i></a></li>
+          <li><a href='https://medium.com/@pkeenan_8920' target='_blank'><i class='icon-medium'></i></a></li>
+          <li><a href='' target='_blank' class='resume'><span>View</span><span>Resume</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </body>
 </html>
