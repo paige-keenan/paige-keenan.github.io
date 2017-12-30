@@ -10,6 +10,15 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+.contact {
+  color: #171717;
+  padding: 50px 0 0;
+}
+h1 {
+  font-weight: 400;
+  font-size: 30px;
+  margin: 0;
+}
 h2 {
   font-weight: 700;
   font-size: 70px;
@@ -28,6 +37,15 @@ h2:after {
   right: 0;
   margin: 0 auto;
 }
+.contact h2 {
+  font-weight: 400;
+  text-align: left;
+  font-size: 25px;
+  margin: 0;
+}
+.contact h2:after {
+  margin: 0;
+}
 h3 {
   font-weight: 400;
   max-width: 500px;
@@ -36,6 +54,15 @@ h3 {
   letter-spacing: .5px;
   margin-bottom: 50px;
   text-align: center;
+}
+.contact h3 {
+  margin: 50px 0 30px;
+  text-align: left;
+}
+h4 {
+  font-size: 17px;
+  margin-bottom: 5px;
+  letter-spacing: .5px;
 }
 p {
   font-family: 'Open Sans', sans-serif;
@@ -51,6 +78,18 @@ main {
   background: #171717;
   color: #fff;
   padding: 50px 0 75px;
+}
+.contact section {
+  padding-left: 20px;
+  position: relative;
+}
+.contact section:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background: #ffa0a0;
 }
 nav {
   padding: 50px 0;
@@ -128,7 +167,15 @@ section p {
     display: none;
   }
   .hero {
+    background: linear-gradient(0deg,rgb(34, 34, 34),rgba(255, 61, 0, 0.44)), url(../images/hero.png);
     height: 70vh;
     background-position: 10%;
+  }
+  main {
+    background: #222222;
+  }
+  section h2,
+  section p {
+    color: #222222;
   }
 }
