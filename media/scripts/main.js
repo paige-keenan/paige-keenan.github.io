@@ -5,12 +5,12 @@
 
       $newRect = $('<div/>').css({
           'width': '5px',
-          'height': '5px',
+          'height': '3px',
           'background-color': color
       });
 
       var posx = (Math.random() * ($(document).width() - 5)).toFixed();
-      var posy = (Math.random() * ($(document).height() - 5)).toFixed();
+      var posy = (Math.random() * ($(document).height() - 3)).toFixed();
 
       $newRect.css({
           'class': 'divy',
@@ -21,7 +21,7 @@
         .addClass('random-div');
     };
 
-    for(x=0; x<50; x++) {
+    for(x=0; x<80; x++) {
       makeRect();
     }
 
