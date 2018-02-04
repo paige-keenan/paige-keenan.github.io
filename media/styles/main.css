@@ -20,7 +20,7 @@ body {
 }
 h1 {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
   line-height: 35px;
 }
@@ -29,6 +29,7 @@ h1 {
   font-size: 40px;
 }
 h2 {
+  margin-top: 0;
   font-weight: 700;
   font-size: 70px;
   padding: 0 0 20px;
@@ -98,6 +99,12 @@ p {
 }
 p span {
   color: #5175f7;
+}
+img {
+  display: none;
+  width: 100%;
+  max-width: 175px;
+  margin-top: 60px;
 }
 main {
   padding: 50px 0 75px;
@@ -170,6 +177,12 @@ section p {
 }
 
 @media only screen and (min-width: 768px) {
+  img {
+    display: block;
+  }
+  h2 {
+    margin: 20px 0 0;
+  }
   h3 {
     margin: 40px auto 60px;
   }
@@ -186,6 +199,12 @@ section p {
   section h2,
   section p {
     color: #222222;
+  }
+  h2:after {
+    display: none;
+  }
+  .contact h2:after {
+    display: block;
   }
   main {
     display: flex;
