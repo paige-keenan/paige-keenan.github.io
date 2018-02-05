@@ -172,8 +172,14 @@ section p {
   color: #171717;
 }
 .random-div {
-  opacity: .35;
+  opacity: .25;
   z-index: -1;
+}
+.random-div:nth-child(odd) {
+  transform: rotate(30deg);
+}
+.random-div:nth-child(even) {
+  transform: rotate(-30deg);
 }
 
 @media only screen and (min-width: 768px) {
