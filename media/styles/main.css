@@ -25,9 +25,9 @@ h1 {
   line-height: 35px;
   font-family: 'Open Sans', sans-serif;
 }
-.contact h1 {
-  font-weight: 700;
-  font-size: 40px;
+h1 b {
+  padding-right: 5px;
+  border-right: 1px solid #5175f7;
 }
 h2 {
   margin-top: 0;
@@ -58,16 +58,6 @@ h5 {
   font-size: 18px;
   letter-spacing: 1px;
   margin-bottom: 0;
-}
-.contact h2 {
-  font-weight: 300;
-  font-size: 30px;
-  margin: 0;
-  padding: 10px 0 20px;
-}
-.contact h2:after {
-  margin: 0;
-  bottom: 0;
 }
 h3 {
   font-weight: 400;
