@@ -23,6 +23,7 @@ h1 {
   font-size: 20px;
   margin: 0;
   line-height: 35px;
+  font-family: 'Open Sans', sans-serif;
 }
 .contact h1 {
   font-weight: 700;
@@ -99,12 +100,6 @@ p {
 }
 p span {
   color: #5175f7;
-}
-img {
-  display: none;
-  width: 100%;
-  max-width: 175px;
-  margin-top: 60px;
 }
 main {
   padding: 50px 0 75px;
@@ -226,4 +221,16 @@ section p {
   .contact section {
     margin-left: 0;
   }
+}
+/*
+  Spacing Helpers
+  */
+.spc-sm-n {
+  margin-top: 10px;
+}
+.spc-med-n {
+  margin-top: 30px;
+}
+.spc-zero-s {
+  margin-bottom: 0;
 }
