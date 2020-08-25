@@ -1,54 +1,125 @@
 <html>
   <head>
-    <title>Paige Keenan | Software Engineer</title>
+    <title>Paige Keenan | Front-End Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Paige Keenan is a front end developer and designer ready to help with any consulting needs for your website.">
     <meta name="keywords" content="Paige Keenan, front end developer, web designer, web developer">
     <link rel="shortcut icon" href="media/images/favicon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:400,700">
-    <link rel="stylesheet" href="media/styles/fonts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="media/styles/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.js"></script>
   </head>
   <body>
-    <main>
-      <section>
-        <div class="row">
-          <h2>Hello</h2>
-          <h1>My name is Paige Keenan, and I am a software engineer in Chicago.</h1>
+    <div class="home">
+      <div class="container">
+        <h1>Paige Keenan</h1>
+        <h2>Front-End Developer</h2>
+        <a class="button" href="/about.html"></a>
+      </div>
+  </div>
+
+
+    <div class="about">
+      <div class="container">
+
+        <div class="content about-content">
+          <div>
+            <h2>About Paige</h2>
+            <p>I am currenlty a Senior Front-End Developer at Bounteous where I work within the Adobe Experience Manager (AEM) platform. I am particuarly passionate about web animations and enjoy opportunities to work closely with designers to help create their envisioned web experiences.</p>
+
+            <p>I'm based in Chicago where I enjoy bouldering, biking the lakefront, surrounding myself with animals, and competing on my <span class="derby">local roller derby team</span>.</p>
+          </div>
+          <div class="image">
+            <img src="/media/images/about.jpeg">
+            <img src="/media/images/derby.png" class="derby-image">
+          </div>
         </div>
-        <div class="row">
-          <h4>About Paige</h4>
-          <article>
-              <p class="spc-med-n spc-zero-s"><b>For Work:</b> I just want to write good code, that gets the job done, that helps your business thrive, and makes people&rsquo;s lives better.</p>
-              <p class="spc-sm-n"><b>For Fun:</b> I like to doodle, skate the lakefront, surround myself with animals, and compete on my local roller derby team.</p>
-          </article>
-          <h4>Selected Blog Posts</h4>
-          <article>
-            <a href="https://medium.com/wyzant-tech/how-to-learn-rails-the-wyzant-way-3ed30760daa5" target="_blank" title="Blog Post">
-              <h5>How to learn Rails the Wyzant way</h5>
+
+        <div class="content-full-width">
+          <div>
+            <h2>Skills & Expertise</h2>
+            <ul>
+              <li>Vue.js</li>
+              <li>HTML, CSS, & JS</li>
+              <li>ES6 & Vanilla JavaScript</li>
+              <li>Ruby on Rails (Full Stack)</li>
+              <li>AEM</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Interests</h2>
+            <ul>
+              <li>Web Animations (JavaScript & CSS)</li>
+              <li>Front-End Frameworks</li>
+              <li>ES6</li>
+              <li>Functional JavaScript</li>
+              <li>Web Accessibility</li>
+              <li>Mentoring & Career Coaching</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Resources</h2>
+            <ul>
+              <li>LinkedIn<br><a href="https://www.linkedin.com/in/paige-keenan-9baa18b7/" target="_blank">Paige Keenan</a></li>
+              <li>Email<br><a href="mailto:paigekatkeenan@gmail.com">paigekatkeenan@gmail.com</a></li>
+              <li>Github<br><a href="https://github.com/paige-keenan" target="_blank">@paige-keenan</a></li>
+              <li>CodePen<br><a href="https://codepen.io/paigekeenan" target="_blank">@paigekeenan</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="content-full-width client-work">
+          <div>
+            <h2>Clients & Product Work</h2>
+            <ul>
+              <li><b>R. J. Reynolds Tobacco Company</b></li>
+              <ul>
+                <li><b>Role:</b> Front-End Lead on Project with Multiple Client Brands</li>
+                <li><b>Tech Stack:</b> AEM, Vanilla JS, Less</li>
+                <li><b>Agency:</b> Bounteous</li>
+              </ul>
+              <li><b><a href="https://www.aemcomponents.dev/" target="_blank">AEM Core Components Library AMP Integration</a></b></li>
+              <ul>
+                <li><b>Role:</b> Front-End Developer on <a href="https://github.com/adobe/aem-core-wcm-components/releases/tag/core.wcm.components.reactor-2.11.0" target="_blank">Release</a> of <a href="https://github.com/adobe/aem-core-wcm-components/tree/master/extensions/amp" target="_blank">Open Source</a> AMP Extension</li>
+                <li><b>Tech Stack:</b> AEM</li>
+                <li><b>Agency:</b> Bounteous</li>
+              </ul>
+              <li><b><a href="https://www.tivo.com/" target="_blank">TiVo</a></b></li>
+              <ul>
+                <li><b>Role:</b> Senior Front-End Developer on B2B AEM Integration and AEM E-Commerce Integration</li>
+                <li><b>Tech Stack:</b> AEM, React, Vanilla JS, Less</li>
+                <li><b>Agency:</b> Bounteous</li>
+              </ul>
+              <li><b><a href="https://www.driv.com/" target="_blank">DRiV</a></b></li>
+              <ul>
+                <li><b>Role:</b> Senior Front-End Developer on Redesign and AEM Integration</li>
+                <li><b>Tech Stack:</b> AEM, Angular, Less</li>
+                <li><b>Awards:</b> <a href="https://winners.webbyawards.com/2020/websites/general-websites/car-sites-car-culture/129495/driv-corporate-site" target="_blank">2020 Webby Honoree</a> in the  category of Best Websites: Car Sites & Car Culture</li>
+                <li><b>Agency:</b> Bounteous</li>
+              </ul>
+              <li><b><a href="https://www.wyzant.com/" target="_blank">Wyzant</a></b></li>
+              <ul>
+                <li><b>Role:</b> In-House Front-End Developer on Multiple Product Initiatives Including a Website Redesign, <a href="https://www.wyzant.com/resources/answers" target="_blank">Wyzant Ask An Expert</a>, and the <a href="https://www.wyzant.com/match" target="_blank">Student Search Experience</a></li>
+                <li><b>Tech Stack:</b> Ruby on Rails, Vue.js</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+
+        <div class="content-full-width">
+          <div>
+            <h2>Featured Blogs</h2>
+            <a class="blog" href="https://www.bounteous.com/insights/2020/07/27/amp-aem-core-components-extension/" target="_blank">
+              <h3>Introducing the AMP for AEM Core Components Extension</h3>
+              <p>Adobe officially released it's long-awaited AMP extension to the Adobe Core Components Library. This is welcome news to all Adobe Experience Manager (AEM) core components consumers—by enabling this extension...</p>
+            </a>
+            <a class="blog" href="" target="_blank">
+              <h3>How to learn Rails the Wyzant way</h3>
               <p>For some background, my team recently switched tech stacks from .NET to Rails. A lot of thought and consideration went into the decision, and ultimately, it was decided...</p>
             </a>
-          </article>
-          <h4>Current Role</h4>
-          <p>Currently, I am a front-end developer at Bounteous. I work on a variety of clients supporting the AEM platform.</p>
+          </div>
         </div>
-      </section>
-    </main>
-    <nav>
-      <div class="row">
-        <ul>
-          <li><a href="mailto:paigekatkeenan@gmail.com" title="Email"><i class="icon-envelop"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/paige-keenan-9baa18b7/" target="_blank" title="LinkedIn"><i class="icon-linkedin2"></i></a></li>
-          <li><a href="https://github.com/paige-keenan" target="_blank" title="Github"><i class="icon-github"></i></a></li>
-          <li><a href="https://codepen.io/paigekeenan/pens/popular/" target="_blank" title="CodePen"><i class="icon-codepen"></i></a></li>
-          <li><a href="https://medium.com/@pkeenan_8920" target="_blank" title="Medium"><i class="icon-medium"></i></a></li>
-          <li><a href="./resume" target="_blank" class="resume"><span>View</span><span>R&#201;sum&#201;</span></a></li>
-        </ul>
-        <a href="./resume" target="_blank" class="resume last-button"><span>View</span><span>R&#201;sum&#201;</span></a>
       </div>
-    </nav>
-    <div class="random-div-container"></div>
-    <script   src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </div>
     <script src="media/scripts/main.js"></script>
   </body>
 </html>
