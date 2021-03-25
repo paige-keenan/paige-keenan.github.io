@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.css">
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <h1>B:Proud Proof Of Concept</h1>
+    <hr>
+    <form>
+      <h2>Step 1: upload an image</h2>
+      <input id="image-uploader" type="file"/>
+
+      <div class="step-2 hide">
+        <h2>Step 2: select an animal overlay</h2>
+        <select>
+          <option>Select</option>
+          <option value="./image-assets/cat.png">Cat</option>
+          <option value="./image-assets/dog.png">Dog</option>
+          <option value="./image-assets/otter.png">Otter</option>
+          <option value="./image-assets/red-line.png">Red Line</option>
+        </select>
+      </div>  
+
+      <div class="step-3 hide">
+        <h2>Step 3: submit!</h2>
+        <button type="submit">Go!</button>
+      </div>
+    </form>
+
+    <div class="crop-image hide">
+      <div class="images">
+        <img id="image-container" crossorigin="anonymous">
+        <img class="animal-image-container" crossorigin="anonymous">
+        <img class="new-image" crossorigin="anonymous">
+      </div>
+      <button id="crop-image">Crop Image</button>
+    </div>
+
+      <div class="step-4 hide">
+      <h2>Step 4: Download assets</h2>
+      <button class="download-button">Download</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script>
+    <script src="https://unpkg.com/merge-images"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
