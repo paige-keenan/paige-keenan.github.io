@@ -29,6 +29,12 @@ canvas {
   top: 0;
   left: 0;
 }
+
+@media (prefers-reduced-motion) {
+  canvas {
+    display: none;
+  }
+}
 .derby {
   cursor: help;
 }
@@ -37,8 +43,9 @@ canvas {
   max-width: 1280px;
 }
 .button {
-  color: #328cff;
+  background: none;
   cursor: pointer;
+  color: #328cff;
   text-decoration: none;
   position: relative;
   border: 3px solid #0358f7;
@@ -75,6 +82,8 @@ canvas {
   align-items: center;
 }
 
+
+
 .button:after {
   content: '🥳 🎉 🤠';
   position: absolute;
@@ -90,11 +99,26 @@ canvas {
   font-size: 22px;
   transition: .2s ease-in;
 }
+@media (prefers-reduced-motion) {
+  .button:after  {
+    display: none;
+  }
+}
+
 .button:hover:before {
   left: -100%;
   opacity: 0;
   transition: 0.2s cubic-bezier(0.24, 0.8, 0.79, 0.63);
 }
+@media (prefers-reduced-motion) {
+  .button:hover:before  {
+    left: 0;
+    opacity: 1;
+    color: #fff;
+  }
+}
+
+
 .button:hover:after {
   left: 0;
   opacity: 1;
@@ -168,10 +192,16 @@ h2 {
 }
 
 .about a {
+  padding-bottom: 2px;
   color: #328cff;
   text-decoration: none;
 }
 
+.about a:not(.blog):hover,
+.about a:not(.blog):focus {
+  border-bottom: 1px solid #0358f7;
+}
+ 
 .content-full-width {
   padding: 20px 0;
   display: flex;
@@ -218,14 +248,15 @@ h2 {
   }
 }
 .about-content .image {
-  width: 40%;
+  width: 275px;
   text-align: right;
   position: relative;
-  margin: 0 15% 30px;
+  margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
   .about-content .image {
-    margin: 0;
+    width: 40%;
+    margin: 0 0 30px;
   }
 }
 
@@ -235,11 +266,27 @@ h2 {
   object-fit: cover;
 }
 .derby-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0;
-  transition: .2s ease-in;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .derby-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: .2s ease-in;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .derby-image {
+    display: none;
+  }
+
+  .derby {
+    cursor: default;
+  }
 }
 
 .derby-image.show {
@@ -256,6 +303,11 @@ ul {
   display: block;
   padding-left: 20px;
   margin-bottom: 50px;
+}
+
+.blog:hover,
+.blog:focus {
+  outline: 1px solid #0358f7;
 }
 .blog:last-of-type {
   margin-bottom: 0;
