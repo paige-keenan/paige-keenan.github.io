@@ -151,12 +151,15 @@ h2 {
   text-transform: uppercase;
   font-weight: 400;
 }
+
 @media only screen and (min-width: 768px) {
   h2 {
     font-size: 1.5vw;
   }
 }
-
+h2 + .blog {
+  margin-top: 20px;
+}
 @media only screen and (min-width: 768px) {
   .about {
     margin-top: 100vh;
@@ -195,11 +198,11 @@ h2 {
   padding-bottom: 2px;
   color: #328cff;
   text-decoration: none;
+  font-weight: 500;
 }
 
-.about a:not(.blog):hover,
-.about a:not(.blog):focus {
-  border-bottom: 1px solid #0358f7;
+.about a:not(.blog):hover {
+  border-bottom: 2px solid #0358f7;
 }
  
 .content-full-width {
@@ -305,9 +308,25 @@ ul {
   margin-bottom: 50px;
 }
 
-.blog:hover,
-.blog:focus {
-  outline: 1px solid #0358f7;
+.blog h3 {
+  display: inline-block;
+  position: relative;
+  margin-top: 0;
+}
+
+.blog h3:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  background: #0358f7;
+}
+
+.blog:hover h3:after {
+  opacity: 1;
 }
 .blog:last-of-type {
   margin-bottom: 0;
@@ -337,6 +356,7 @@ h3 {
 
 .blog p {
   color: #000;
+  margin: 0;
 }
 .client-work ul ul {
   margin-bottom: 20px;
