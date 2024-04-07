@@ -1,5 +1,4 @@
 function isMobile() {
-  return false;
   var windowWidth = window.innerWidth;
   return windowWidth < 768 || /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
