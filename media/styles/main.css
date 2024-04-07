@@ -98,12 +98,12 @@ canvas {
 }
 
 .button:hover,
-.button:focus {
+.button:focus-visible {
   background: #81b8d52b;
   transition: 0.2s cubic-bezier(0.24, 0.8, 0.79, 0.63);
 } 
 
-.button:focus {
+.button:focus-visible {
   outline: 3px dashed #f19870;
   transition: 0s;
 }
